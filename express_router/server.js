@@ -21,7 +21,7 @@ router.use(function(req, res, next){
 // assuming the param name id 'id'
 router.use("/user/:id", function(req, res, next){
 	if (req.param.id == 0){
-		res.json({"message": "You must pass ID other than 0");
+		res.json({"message": "You must pass ID other than 0"});
 	} else {
 		next();
 	}

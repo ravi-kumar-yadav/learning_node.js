@@ -39,6 +39,15 @@ router.get("/user/:id", function(req, res, next){
 });
 
 
+// this 'middleware' is executed at last
+// here "*" is not necessary, its redundant to type it here
+// following code will be executed for all requests that reach it,
+// i.e. if 'no-mapping' is found till end/now
+router.use("*", function(req, res){
+	res.status(404).send("404");
+});
+
+
 // "/api" is attached to each incoming request
 app.use("/api", router);
 

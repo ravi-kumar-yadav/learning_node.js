@@ -33,5 +33,42 @@ router.get('/', function(req, res){
 });
 
 
+// Reading 'parameters' from 'get' request itself
+router.get('/secret/:key', function(req, res){
+	var key = req.params.key;
+	res.end('Password: ' + key);
+});
+
+
+/*
+	Nested key format
+	http://..../value/otherValue
+
+	req.params = 	{
+				key: 'value',
+				otherKey: 'otherValue'
+			}
+*/
+
+// Reading multiple nested keys
+router.get('/secret/:key/:otherKey', function(req, res){
+	var key = req.params.key;
+	var otherKey = req.params.otherKey;
+
+	res.end('Value: ' + key + ', otherValue: ' + otherKey);
+});
+
+
+
+
+
+// Query i.e. means key-value pairs in query itself
+// e.g. http://.../secret?pass=Password...
+router.get('/secret*', function(req, res){
+	var password = req.query.pass;
+	res.end('New Password: ' + password);
+});
+
+
 app.listen(3456);
 exports = app;

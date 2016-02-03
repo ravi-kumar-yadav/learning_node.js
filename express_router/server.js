@@ -20,7 +20,7 @@ router.use(function(req, res, next){
 // accessing 'parameter' in 'middleware'
 // assuming the param name id 'id'
 router.use("/user/:id", function(req, res, next){
-	if (req.param.id == 0){
+	if (req.params.id == 0){
 		res.json({"message": "You must pass ID other than 0"});
 	} else {
 		next();
@@ -35,7 +35,7 @@ router.get("/", function(req, res){
 
 // accessing 'id' in normal router
 router.get("/user/:id", function(req, res, next){
-	res.json({"message": "Hello " + req.param.id});
+	res.json({"message": "Hello " + req.params.id});
 });
 
 

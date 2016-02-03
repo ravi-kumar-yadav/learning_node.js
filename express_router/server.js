@@ -29,7 +29,12 @@ router.use("/user/:id", function(req, res, next){
 
 
 router.get("/", function(req, res){
-	res.json({"message": "Hello World"});
+	//res.json({"message": "Hello World"});
+	res.sendFile(__dirname + "/public/index.html");
+});
+
+router.get("/about", function(req, res){
+	res.sendFile(__dirname + "/public/about.html");
 });
 
 
@@ -48,8 +53,11 @@ router.use("*", function(req, res){
 });
 
 
-// "/api" is attached to each incoming request
-app.use("/api", router);
+//// "/api" is attached to each incoming request
+//app.use("/api", router);
+
+// "/" can be added as first argument but its redundant
+app.use(router);
 
 
 app.listen(port, function(){

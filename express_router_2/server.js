@@ -4,6 +4,10 @@ var router = express.Router();
 var app = express();
 var bodyParser = require('body-parser');
 
+
+var secretKey = "goat";
+
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 
@@ -21,10 +25,20 @@ router.all("*", function(req, res, next){
 });
 
 
+/*
 router.post('/secret', function(req, res){
 	var secret = req.body.secret;
 
 	res.end('Password: ' + secret);
+});
+*/
+router.post('/secret', function(req, res){
+	var secret = req.body.secret;
+	var user = {};
+
+	user.authorised = secret === secretKey ? true : false;
+
+	res.render('secret', user);
 });
 
 
@@ -33,10 +47,30 @@ router.get('/', function(req, res){
 });
 
 
+/*
 // Reading 'parameters' from 'get' request itself
 router.get('/secret/:key', function(req, res){
 	var key = req.params.key;
 	res.end('Password: ' + key);
+});
+*/
+
+router.get('/secret/:key', function(req, res){
+	var secret = req.params.key;
+	var user = {};
+	
+	user.authorised = secret === secretKey ? true : false;
+
+	res.render('secret', user);
+});
+
+
+
+router.get('/secret', function(req, res){
+	var user = 	{
+				authorised: false
+			};
+	res.render('secret', user);
 });
 
 
@@ -66,7 +100,13 @@ router.get('/secret/:key/:otherKey', function(req, res){
 // e.g. http://.../secret?pass=Password...
 router.get('/secret*', function(req, res){
 	var password = req.query.pass;
-	res.end('New Password: ' + password);
+	//res.end('New Password: ' + password);
+	var user = {};
+	console.log(password);
+	console.log(secretKey);
+	user.authorised = password === secretKey ? true : false;
+
+	res.render('secret', user);
 });
 
 

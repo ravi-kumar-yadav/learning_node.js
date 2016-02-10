@@ -1,0 +1,11 @@
+{
+  "name": "sending_mail",
+  "version": "0.0.1",
+  "description": "sending mail in node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "nodejs index.js"
+  },
+  "author": "ram",
+  "license": "BSD-2-Clause"
+}

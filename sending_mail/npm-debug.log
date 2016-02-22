@@ -1,0 +1,90 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/paytm/.nvm/versions/node/v4.3.0/bin/node',
+1 verbose cli   '/home/paytm/.nvm/versions/node/v4.3.0/bin/npm',
+1 verbose cli   'install',
+1 verbose cli   'mysqlexit' ]
+2 info using npm@2.14.12
+3 info using node@v4.3.0
+4 verbose install initial load of /home/paytm/Paytm/learning_node/old_sending_mail/package.json
+5 warn package.json sending_mail@0.0.1 No repository field.
+6 warn package.json sending_mail@0.0.1 No README data
+7 verbose installManyTop reading scoped package data from /home/paytm/Paytm/learning_node/old_sending_mail/node_modules/cheerio/package.json
+8 verbose installManyTop reading scoped package data from /home/paytm/Paytm/learning_node/old_sending_mail/node_modules/mysql/package.json
+9 verbose installManyTop reading scoped package data from /home/paytm/Paytm/learning_node/old_sending_mail/node_modules/nodemailer/package.json
+10 verbose readDependencies loading dependencies from /home/paytm/Paytm/learning_node/old_sending_mail/package.json
+11 silly cache add args [ 'mysqlexit', null ]
+12 verbose cache add spec mysqlexit
+13 silly cache add parsed spec Result {
+13 silly cache add   raw: 'mysqlexit',
+13 silly cache add   scope: null,
+13 silly cache add   name: 'mysqlexit',
+13 silly cache add   rawSpec: '',
+13 silly cache add   spec: 'latest',
+13 silly cache add   type: 'tag' }
+14 silly addNamed mysqlexit@latest
+15 verbose addNamed "latest" is being treated as a dist-tag for mysqlexit
+16 info addNameTag [ 'mysqlexit', 'latest' ]
+17 silly mapToRegistry name mysqlexit
+18 silly mapToRegistry using default registry
+19 silly mapToRegistry registry https://registry.npmjs.org/
+20 silly mapToRegistry uri https://registry.npmjs.org/mysqlexit
+21 verbose addNameTag registry:https://registry.npmjs.org/mysqlexit not in flight; fetching
+22 verbose request uri https://registry.npmjs.org/mysqlexit
+23 verbose request no auth needed
+24 info attempt registry request try #1 at 5:36:50 PM
+25 verbose request id 4bd0af52f30b0da7
+26 http request GET https://registry.npmjs.org/mysqlexit
+27 http 404 https://registry.npmjs.org/mysqlexit
+28 verbose headers { 'content-type': 'application/json',
+28 verbose headers   'cache-control': 'max-age=0',
+28 verbose headers   'content-length': '2',
+28 verbose headers   'accept-ranges': 'bytes',
+28 verbose headers   date: 'Fri, 12 Feb 2016 12:06:51 GMT',
+28 verbose headers   via: '1.1 varnish',
+28 verbose headers   age: '0',
+28 verbose headers   connection: 'keep-alive',
+28 verbose headers   'x-served-by': 'cache-sin6925-SIN',
+28 verbose headers   'x-cache': 'MISS',
+28 verbose headers   'x-cache-hits': '0',
+28 verbose headers   'x-timer': 'S1455278811.159185,VS0,VE257' }
+29 silly get cb [ 404,
+29 silly get   { 'content-type': 'application/json',
+29 silly get     'cache-control': 'max-age=0',
+29 silly get     'content-length': '2',
+29 silly get     'accept-ranges': 'bytes',
+29 silly get     date: 'Fri, 12 Feb 2016 12:06:51 GMT',
+29 silly get     via: '1.1 varnish',
+29 silly get     age: '0',
+29 silly get     connection: 'keep-alive',
+29 silly get     'x-served-by': 'cache-sin6925-SIN',
+29 silly get     'x-cache': 'MISS',
+29 silly get     'x-cache-hits': '0',
+29 silly get     'x-timer': 'S1455278811.159185,VS0,VE257' } ]
+30 verbose stack Error: Registry returned 404 for GET on https://registry.npmjs.org/mysqlexit
+30 verbose stack     at makeError (/home/paytm/.nvm/versions/node/v4.3.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:264:12)
+30 verbose stack     at CachingRegistryClient.<anonymous> (/home/paytm/.nvm/versions/node/v4.3.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:242:14)
+30 verbose stack     at Request._callback (/home/paytm/.nvm/versions/node/v4.3.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+30 verbose stack     at Request.self.callback (/home/paytm/.nvm/versions/node/v4.3.0/lib/node_modules/npm/node_modules/request/request.js:198:22)
+30 verbose stack     at emitTwo (events.js:87:13)
+30 verbose stack     at Request.emit (events.js:172:7)
+30 verbose stack     at Request.<anonymous> (/home/paytm/.nvm/versions/node/v4.3.0/lib/node_modules/npm/node_modules/request/request.js:1082:10)
+30 verbose stack     at emitOne (events.js:82:20)
+30 verbose stack     at Request.emit (events.js:169:7)
+30 verbose stack     at IncomingMessage.<anonymous> (/home/paytm/.nvm/versions/node/v4.3.0/lib/node_modules/npm/node_modules/request/request.js:1009:12)
+31 verbose statusCode 404
+32 verbose pkgid mysqlexit
+33 verbose cwd /home/paytm/Paytm/learning_node/old_sending_mail
+34 error Linux 3.19.0-49-generic
+35 error argv "/home/paytm/.nvm/versions/node/v4.3.0/bin/node" "/home/paytm/.nvm/versions/node/v4.3.0/bin/npm" "install" "mysqlexit"
+36 error node v4.3.0
+37 error npm  v2.14.12
+38 error code E404
+39 error 404 Registry returned 404 for GET on https://registry.npmjs.org/mysqlexit
+39 error 404
+39 error 404 'mysqlexit' is not in the npm registry.
+39 error 404 You should bug the author to publish it (or use the name yourself!)
+39 error 404 It was specified as a dependency of 'sending_mail'
+39 error 404
+39 error 404 Note that you can also install from a
+39 error 404 tarball, folder, http url, or git url.
+40 verbose exit [ 1, true ]
